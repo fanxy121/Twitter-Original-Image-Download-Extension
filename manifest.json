@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Twitter Original Image Download Extension",
+  "description": "If you click etc button, extra button will be pushed in list!",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon_on.png"
+  },
+
+  "background": {
+    "scripts": ["main.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.twitter  .com/*"],
+      "js": ["script.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ]
+}
